@@ -9,7 +9,7 @@ public class TreeExample {
                         new Tree(6,
                                 new Tree(7, new Tree(8), null),
                                 new Tree(9, new Tree(10), new Tree(11))));
-
-        System.out.println("Total sum: " + Tree.sumWide(root));
+        int num = 12;
+        System.out.println("Does the Tree has " + num + "? - " + Tree.wideSearch(root, num));
     }
 }

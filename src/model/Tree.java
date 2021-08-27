@@ -18,18 +18,18 @@ public class Tree {
         this.value = value;
     }
 
-    public static int sumWide(Tree root) {
+    public static boolean wideSearch(Tree root, int num) {
         Queue<Tree> list = new LinkedList<>();
-        list.add(root);
-
-        int sum = 0;
+        list.offer(root);
         while (!list.isEmpty()) {
             Tree node = list.remove();
-            sum = sum + node.value;
+            if (num == node.value) {
+                return true;
+            }
             if (node.left != null) list.add(node.left);
             if (node.right != null) list.add(node.right);
         }
-        return sum;
+        return false;
     }
 
 }
